@@ -1,0 +1,27 @@
+{
+  "name": "nightmare-click-at",
+  "version": "1.0.0",
+  "description": "nightmare plugin for click at a position relative to a specific selector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skiloop/nightmare-click-at.git"
+  },
+  "keywords": [
+    "nightmare",
+    "click",
+    "at"
+  ],
+  "author": "skiloop",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/skiloop/nightmare-click-at/issues"
+  },
+  "homepage": "https://github.com/skiloop/nightmare-click-at#readme",
+  "dependencies": {
+    "debug": "^3.0.1"
+  }
+}
