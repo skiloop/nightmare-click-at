@@ -1,3 +1,4 @@
+const debug = require('debug')('nightmare:clickAt');
 module.exports = function (Nightmare) {
     if (Nightmare) {
         Nightmare.action('clickAt', function (name, options, parent, win, renderer, done) {
@@ -19,10 +20,10 @@ module.exports = function (Nightmare) {
                 done();
             },
             function (selector, px, py, done) {
-                var child = this.child;
+                let child = this.child;
                 return this.evaluate_now(
                     function (selector) {
-                        var bounds = document.querySelector(selector).getBoundingClientRect();
+                        let bounds = document.querySelector(selector).getBoundingClientRect();
                         return {
                             left: bounds.left,
                             top: bounds.top,
@@ -32,8 +33,9 @@ module.exports = function (Nightmare) {
                     },
                     function (error, bounds) {
                         if (error) return done(error);
-                        var x = bounds.left + px;
-                        var y = bounds.top + py;
+                        let x = Math.floor(bounds.left + px);
+                        let y = Math.floor(bounds.top + py);
+                        debug(`click at (${px},${py}) of ${selector}`);
                         child.call('clickAt', x, y, done);
                     }, selector);
             });

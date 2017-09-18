@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/skiloop/nightmare-click-at/issues"
   },
-  "homepage": "https://github.com/skiloop/nightmare-click-at#readme"
+  "homepage": "https://github.com/skiloop/nightmare-click-at#readme",
+  "dependencies": {
+    "debug": "^3.0.1"
+  }
 }
